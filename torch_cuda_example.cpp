@@ -34,11 +34,12 @@ int main() {
               << std::endl;
 
     // Create device object for CUDA
-    torch::Device device(torch::kCUDA);
+    torch::TensorOptions opts =
+        torch::TensorOptions().dtype(torch::kFloat32).device(torch::kCUDA);
 
     // Create two tensors on CUDA device
-    torch::Tensor tensor1 = torch::rand({3, 4}, device);
-    torch::Tensor tensor2 = torch::rand({3, 4}, device);
+    torch::Tensor tensor1 = torch::rand({3, 4}, opts);
+    torch::Tensor tensor2 = torch::rand({3, 4}, opts);
 
     std::cout << "\nTensor 1 (on CUDA):" << std::endl;
     std::cout << tensor1 << std::endl;
