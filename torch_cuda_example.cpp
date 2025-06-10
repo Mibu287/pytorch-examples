@@ -1,8 +1,9 @@
 #include <cstdlib>
 #include <iostream>
-#include <torch/torch.h>
 
 #include <dlfcn.h>
+
+#include <torch/torch.h>
 
 bool load_torch_cuda_library() {
     static void *handle =
