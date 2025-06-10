@@ -37,3 +37,10 @@ set(CMAKE_CUDA_ARCHITECTURES "75;80;86;89;90")
 # Create executable
 add_executable(torch_cuda_example torch_cuda_example.cpp)
 target_link_libraries(torch_cuda_example PRIVATE torch_external)
+
+add_custom_target(
+  run_torch_cuda_example
+  COMMAND torch_cuda_example
+  DEPENDS torch_cuda_example
+  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+  COMMENT "Running torch_cuda_example")
