@@ -1,0 +1,14 @@
+# Build directories
+/build
+
+# Vim swap files
+*.swp
+*.swo
+
+# VSCode settings and workspace files
+.vscode
+!/.vscode/settings.json
+*.code-workspace
+
+# Python cache files
+__pycache__/
