@@ -1,0 +1,12 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_CUDA_HOST_COMPILER=clang++",
+        "-DCMAKE_CXX_FLAGS='-fclang-abi-compat=17'"
+    ],
+    "cmake.configureOnEdit": false,
+    "cmake.configureOnOpen": false,
+    "cmake.automaticReconfigure": false,
+    "cmake.generator": "Ninja",
+    "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json"
+}

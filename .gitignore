@@ -6,7 +6,7 @@
 *.swo
 
 # VSCode settings and workspace files
-.vscode
+.vscode/*
 !/.vscode/settings.json
 *.code-workspace
 
